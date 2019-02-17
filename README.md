@@ -25,3 +25,11 @@ linear regression, random forest, penalized regression (ridge and lasso) and pri
 ```b```: 1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town
 ```lstat```: percent lower status of the population
 ```medv```: median value of owner-occupied homes in $1000's
+
+# Result:
+- Linear regression produces a model with MSE equal approximately 0.0869
+- Random forest produces a model with MSE equal approximately 0.0973
+Both models are very similar in term of prediction metric. However, linear regression still encounter a non-constant variance, which may cause the prediction estimate to be very noisy for future data.
+Random forest, on the other hand, randomly selects features in each trees. Thus, it leads to a better estimates, reduces varaince and helps to avoid overfitting. It is also less affected by outliers and multicollinearity. 
+
+Hence, for this particular dataset, random forest is a model that perform better.
